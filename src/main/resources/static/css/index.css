@@ -1,0 +1,53 @@
+@import 'common.css';
+
+.ss-photo-item {
+	border: solid 1px #ddd;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+	font-size: 12px;
+}
+
+.ss-photo {
+	height: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.ss-text {
+	padding: 10px;
+}
+
+.ss-photo-name {
+	font-weight: bold;
+}
+
+.ss-photo-content {
+	height: 40px;
+	color: #999;
+}
+
+.ss-photo-buttons {
+	position: relative;
+}
+
+.ss-btn {
+	width: 47%;
+	padding: 5px;
+	border: solid 1px #ddd;
+	color: #999;
+	font-size: 11px;
+	text-align: center;
+}
+
+.ss-btn-comments {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+
+
+
+
+
+
+

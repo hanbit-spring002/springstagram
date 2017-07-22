@@ -1,0 +1,27 @@
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ss-container {
+	position: relative;
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.ss-title {
+	position: relative;
+	margin-bottom: 30px;
+	font-size: 50px;
+	font-family: 'Comic Sans MS', serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+.ss-write {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	font-family: MalgunGothic;
+}
