@@ -13,8 +13,7 @@ public class FileDAO {
 	private SqlSession sqlSession;
 	
 	public int insertFile(FileVO file) {
-		
-		return 0;
+		return sqlSession.insert("file.insertFile", file);
 	}
 	
 }

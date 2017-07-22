@@ -13,8 +13,7 @@ public class PhotoDAO {
 	private SqlSession sqlSession;
 	
 	public int insertPhoto(PhotoVO photo) {
-		
-		return 0;
+		return sqlSession.insert("photo.insertPhoto", photo);
 	}
 	
 }

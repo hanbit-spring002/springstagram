@@ -25,9 +25,11 @@ public class PhotoService {
 		String id = idGenerationService.generateId(8);
 		photo.setId(id);
 		
-		fileService.saveFile(id, file);
+		int inserted = photoDAO.insertPhoto(photo);
 		
-		return photoDAO.insertPhoto(photo);
+		fileService.saveFile(id, file);
+	
+		return inserted;
 	}
 	
 }
