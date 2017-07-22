@@ -1,6 +1,7 @@
 @import 'common.css';
 
 .ss-photo-item {
+	margin-bottom: 20px;
 	border: solid 1px #ddd;
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
 	font-size: 12px;
