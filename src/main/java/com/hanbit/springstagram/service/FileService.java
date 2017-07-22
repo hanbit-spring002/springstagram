@@ -39,5 +39,21 @@ public class FileService {
 		
 		return fileDAO.insertFile(fileInfo);
 	}
+
+	public FileVO getFile(String photoId) {
+		return fileDAO.selectFile(photoId);
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+

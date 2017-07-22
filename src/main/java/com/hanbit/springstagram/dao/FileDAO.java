@@ -16,4 +16,8 @@ public class FileDAO {
 		return sqlSession.insert("file.insertFile", file);
 	}
 	
+	public FileVO selectFile(String photoId) {
+		return sqlSession.selectOne("file.selectFile", photoId);
+	}
+	
 }

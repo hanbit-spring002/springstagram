@@ -10,5 +10,12 @@
   	VALUES
   		(#{photoId}, #{filePath}, #{fileType}, #{fileLength})
   </insert>
+  
+  <select id="selectFile" parameterType="string"
+  	resultType="fileVO">
+  	SELECT file_path, file_type, file_length
+  	  FROM tbl_files
+  	 WHERE photo_id = #{photoId}
+  </select>
 
 </mapper>
