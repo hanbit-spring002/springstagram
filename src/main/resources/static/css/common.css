@@ -6,7 +6,7 @@ ul {
 
 .ss-container {
 	position: relative;
-	width: 1000px;
+	max-width: 970px;
 	margin: 0px auto;
 }
 

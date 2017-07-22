@@ -1,0 +1,17 @@
+@import 'common.css';
+
+input[type=file] {
+	display: none;
+}
+
+.ss-write-row {
+	margin: 15px 0px;
+}
+
+.ss-write-preview img {
+	max-width: 50%;
+}
+
+.ss-buttons {
+	text-align: right;
+}
