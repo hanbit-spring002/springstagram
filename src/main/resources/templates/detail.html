@@ -37,18 +37,12 @@
 				<div class="ss-photo-content"><%photo.content%></div>
 				<div class="ss-photo-dt"></div>
 				<ul class="ss-comments">
+				<%#photo.comments%>
 					<li>
-						<span class="ss-comment-author">작성자</span>
-						<span class="ss-comment-content">댓글내용</span>
+						<span class="ss-comment-author"><%author%></span>
+						<span class="ss-comment-content"><%comment%></span>
 					</li>
-					<li>
-						<span class="ss-comment-author">작성자</span>
-						<span class="ss-comment-content">댓글내용</span>
-					</li>
-					<li>
-						<span class="ss-comment-author">작성자</span>
-						<span class="ss-comment-content">댓글내용</span>
-					</li>
+				<%/photo.comments%>
 				</ul>
 				<div class="ss-comment-form">
 					<input id="ss-comment-author" type="text" class="form-control" placeholder="작성자">

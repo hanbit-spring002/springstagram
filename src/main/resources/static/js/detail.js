@@ -29,7 +29,7 @@ $(function() {
 			return;
 		}
 		
-		var photoId = $('photo-id').val();
+		var photoId = $('#photo-id').val();
 		
 		$.ajax({
 			url: '/api/comment',
