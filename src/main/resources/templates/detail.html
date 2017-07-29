@@ -56,6 +56,15 @@
 <input type="hidden" id="photo-id" value="<%photo.id%>">
 <input type="hidden" id="update-dt" value="<%photo.updateDt%>">
 
+<script id="comments-template" type="text/x-handlebars-template">
+{{#each this}}
+	<li>
+		<span class="ss-comment-author">{{author}}</span>
+		<span class="ss-comment-content">{{comment}}</span>
+	</li>
+{{/each}}
+</script>
+
 <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/handlebars@4.0.10/dist/handlebars.min.js"></script>

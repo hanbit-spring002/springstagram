@@ -1,4 +1,7 @@
 $(function() {
+	var source = $('#comments-template').html();
+	var template = Handlebars.compile(source);
+	
 	$('.ss-write').on('click', function() {
 		location.href = '/write';
 	});
@@ -40,7 +43,10 @@ $(function() {
 				comment: content
 			},
 			success: function(result) {
+				var html = template(result);
 				
+				$('.ss-comments').html(html);
+				$('.ss-comment-count').html(result.length);
 			}
 		})
 	});
