@@ -12,10 +12,14 @@
   </insert>
   
   <select id="selectPhotos" resultType="photoVO">
-  	SELECT id, name, content, likes, update_dt
-	  FROM tbl_photos
+	SELECT p.id, name, content, likes, p.update_dt,
+		   COUNT(c.id) comment_count
+	  FROM tbl_photos p
+	  LEFT JOIN tbl_comments c
+	    ON p.id = c.photo_id
+	 GROUP BY p.id
 	 ORDER BY update_dt DESC
-  </select>
+   </select>
   
   <select id="selectPhoto" parameterType="string" resultType="photoVO">
   	SELECT id, name, content, likes, update_dt

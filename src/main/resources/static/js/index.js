@@ -1,8 +1,5 @@
 $(function() {
 	var source = $('#photo-template').html();
-	source = source.replace(/<%/g, '{{');
-	source = source.replace(/%>/g, '}}');
-	
 	var template = Handlebars.compile(source);
 
 	$('.ss-write').on('click', function() {

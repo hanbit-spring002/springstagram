@@ -1,3 +1,4 @@
+{{=<% %>=}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,22 +19,22 @@
 		<div class="col-md-8 ss-detail-col">
 			<div class="ss-detail-box ss-detail-photo">
 				<div class="ss-photo"
-					style="background-image:url(/file/{{photo.id}})">
+					style="background-image:url(/file/<%photo.id%>)">
 				</div>
 				<div class="ss-photo-buttons">
 					<div class="ss-btn ss-btn-likes">
-						좋아요 <span class="ss-photo-likes">{{photo.likes}}</span>
+						좋아요 <span class="ss-photo-likes"><%photo.likes%></span>
 					</div>
 					<div class="ss-btn ss-btn-comments">
-						댓글 0
+						댓글 <span class="ss-comment-count"><%photo.commentCount%></span>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4 ss-detail-col">
 			<div class="ss-detail-box ss-detail-text">
-				<div class="ss-photo-name">{{photo.name}}</div>
-				<div class="ss-photo-content">{{photo.content}}</div>
+				<div class="ss-photo-name"><%photo.name%></div>
+				<div class="ss-photo-content"><%photo.content%></div>
 				<div class="ss-photo-dt"></div>
 				<ul class="ss-comments">
 					<li>
@@ -58,8 +59,8 @@
 		</div>
 	</div>
 </div>
-<input type="hidden" id="photo-id" value="{{photo.id}}">
-<input type="hidden" id="update-dt" value="{{photo.updateDt}}">
+<input type="hidden" id="photo-id" value="<%photo.id%>">
+<input type="hidden" id="update-dt" value="<%photo.updateDt%>">
 
 <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>

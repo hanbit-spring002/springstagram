@@ -38,7 +38,7 @@ $(function() {
 				photoId: photoId,
 				author: author,
 				comment: content
-			}
+			},
 			success: function(result) {
 				
 			}

@@ -10,6 +10,7 @@
 
 	<typeAliases>
 		<typeAlias alias="photoVO" type="com.hanbit.springstagram.vo.PhotoVO" />
+		<typeAlias alias="commentVO" type="com.hanbit.springstagram.vo.CommentVO" />
 		<typeAlias alias="fileVO" type="com.hanbit.springstagram.vo.FileVO" />
 	</typeAliases>
 

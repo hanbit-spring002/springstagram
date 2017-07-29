@@ -4,8 +4,19 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="comment">
 
-  <select id="selectDual" parameterType="int" resultType="int">
-  	SELECT #{no} FROM DUAL
+  <select id="selectComments"
+  	parameterType="string" resultType="commentVO">
+  	SELECT photo_id, id, author, comment, update_dt
+  	  FROM tbl_comments
+  	 WHERE photo_id = #{photoId}
+  	 ORDER BY update_dt
   </select>
+  
+  <insert id="insertComment" parameterType="commentVO">
+  	INSERT INTO tbl_comments
+  		(photo_id, id, author, comment, update_dt)
+  	VALUES
+  		(#{photoId}, #{id}, #{author}, #{comment}, NOW())
+  </insert>
 
 </mapper>
