@@ -1,13 +1,16 @@
 package com.hanbit.springstagram.vo;
 
+import java.util.List;
+
 public class PhotoVO {
 
 	private String id;
 	private String name;
 	private String content;
 	private int likes;
+	private int commentCount;
 	private String updateDt;
-	//private List<CommentVO> comments;
+	private List<CommentVO> comments;
 	
 	public String getId() {
 		return id;
@@ -38,6 +41,18 @@ public class PhotoVO {
 	}
 	public void setUpdateDt(String updateDt) {
 		this.updateDt = updateDt;
+	}
+	public List<CommentVO> getComments() {
+		return comments;
+	}
+	public void setComments(List<CommentVO> comments) {
+		this.comments = comments;
+	}
+	public int getCommentCount() {
+		return commentCount;
+	}
+	public void setCommentCount(int commentCount) {
+		this.commentCount = commentCount;
 	}
 	
 }

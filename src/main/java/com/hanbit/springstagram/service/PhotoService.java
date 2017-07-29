@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.hanbit.springstagram.dao.CommentDAO;
 import com.hanbit.springstagram.dao.PhotoDAO;
+import com.hanbit.springstagram.vo.CommentVO;
 import com.hanbit.springstagram.vo.PhotoVO;
 
 @Service
@@ -21,6 +23,9 @@ public class PhotoService {
 	
 	@Autowired
 	private PhotoDAO photoDAO;
+	
+	@Autowired
+	private CommentDAO commentDAO;
 	
 	public List<PhotoVO> list() {
 		return photoDAO.selectPhotos();
@@ -43,7 +48,22 @@ public class PhotoService {
 	}
 	
 	public PhotoVO get(String id) {
-		return photoDAO.selectPhoto(id);
+		PhotoVO photoVO = photoDAO.selectPhoto(id);
+		List<CommentVO> comments = commentDAO.selectComments(id);
+		
+		photoVO.setCommentCount(comments.size());
+		photoVO.setComments(comments);
+		
+		return photoVO;
 	}
 	
 }
+
+
+
+
+
+
+
+
+
