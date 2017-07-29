@@ -1,6 +1,7 @@
 package com.hanbit.springstagram.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -14,6 +15,11 @@ public class MainController {
 	@RequestMapping("/write")
 	public String write() {
 		return "write";
+	}
+	
+	@RequestMapping("/{id}")
+	public String detail(@PathVariable("id") String id) {
+		return "detail";
 	}
 	
 }

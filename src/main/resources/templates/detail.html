@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Springstaram</title>
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+<div class="ss-container">
+	<div class="ss-title">
+		Springstaram
+		<button class="ss-write btn btn-primary">
+			사진등록
+		</button>
+	</div>
+	<div class="row">
+		<div class="col-md-8 ss-detail-col">
+			<div class="ss-detail-box ss-detail-photo">
+				<div class="ss-photo"
+					style="background-image:url(/img/Penguins.jpg)">
+				</div>
+				<div class="ss-photo-buttons">
+					<div class="ss-btn ss-btn-likes">
+						좋아요 0
+					</div>
+					<div class="ss-btn ss-btn-comments">
+						댓글 0
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 ss-detail-col">
+			<div class="ss-detail-box ss-detail-text">
+				<div class="ss-photo-name">사진이름</div>
+				<div class="ss-photo-content">사진설명</div>
+				<div class="ss-photo-dt">3시간전</div>
+				<ul class="ss-comments">
+					<li>
+						<span class="ss-comment-author">작성자</span>
+						<span class="ss-comment-content">댓글내용</span>
+					</li>
+					<li>
+						<span class="ss-comment-author">작성자</span>
+						<span class="ss-comment-content">댓글내용</span>
+					</li>
+					<li>
+						<span class="ss-comment-author">작성자</span>
+						<span class="ss-comment-content">댓글내용</span>
+					</li>
+				</ul>
+				<div class="ss-comment-form">
+					<input id="ss-comment-author" type="text" class="form-control" placeholder="작성자">
+					<textarea id="ss-comment-content" class="form-control" placeholder="댓글내용"></textarea>
+					<button class="btn btn-success">댓글쓰기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/handlebars@4.0.10/dist/handlebars.min.js"></script>
+<script src="/js/detail.js"></script>
+</body>
+</html>
