@@ -3,15 +3,23 @@ $(function() {
 		location.href = '/write';
 	});
 	
+	$.ajax({
+		url: '/api/list',
+		success: function(result) {
+			setList(result);
+		}
+	});
+	
 	function setList(list) {
 		$('.ss-photos').empty();
 		
 		for (var i=0; i<list.length; i++) {
 			var item = list[i];
+			var img = '/file/' + item.id;
 			
 			var html = '<li class="col-md-3">';
 			html += '<div class="ss-photo-item">';
-			html += '<div class="ss-photo" style="background-image:url(' + item.img + ')">';
+			html += '<div class="ss-photo" style="background-image:url(' + img + ')">';
 			html += '</div>';
 			html += '<div class="ss-text">';
 			html += '<div class="ss-photo-name">' + item.name + '</div>';
@@ -21,7 +29,7 @@ $(function() {
 			html += '좋아요 ' + item.likes;
 			html += '</div>';
 			html += '<div class="ss-btn ss-btn-comments">';
-			html += '댓글 ' + item.comments;
+			html += '댓글 ' + 0;
 			html += '</div>';
 			html += '</div>';
 			html += '</div>';
@@ -31,20 +39,6 @@ $(function() {
 			$('.ss-photos').append(html);
 		}
 	}
-	
-	setList([{
-		img: '/img/Penguins.jpg',
-		name: '펭귄',
-		content: '남극입니다.',
-		likes: 4,
-		comments: 0
-	}, {
-		img: '/img/Penguins.jpg',
-		name: '펭귄 두마리',
-		content: '추워요',
-		likes: 2,
-		comments: 0
-	}]);
 });
 
 

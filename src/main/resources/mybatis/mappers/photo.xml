@@ -10,5 +10,11 @@
   	VALUES
   		(#{id}, #{name}, #{content}, 0, NOW())
   </insert>
+  
+  <select id="selectPhotos" resultType="photoVO">
+  	SELECT id, name, content, likes, update_dt
+	  FROM tbl_photos
+	 ORDER BY update_dt DESC
+  </select>
 
 </mapper>
