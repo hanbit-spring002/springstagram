@@ -15,125 +15,34 @@
 		</button>
 	</div>
 	<ul class="ss-photos row">
-		<li class="col-md-3">
-			<div class="ss-photo-item">
-				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
-				</div>
-				<div class="ss-text">
-					<div class="ss-photo-name">사진이름</div>
-					<div class="ss-photo-content">사진설명</div>
-					<div class="ss-photo-buttons">
-						<div class="ss-btn">
-							좋아요 20
-						</div>
-						<div class="ss-btn ss-btn-comments">
-							댓글 2
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-3">
-			<div class="ss-photo-item">
-				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
-				</div>
-				<div class="ss-text">
-					<div class="ss-photo-name">사진이름</div>
-					<div class="ss-photo-content">사진설명</div>
-					<div class="ss-photo-buttons">
-						<div class="ss-btn">
-							좋아요 20
-						</div>
-						<div class="ss-btn ss-btn-comments">
-							댓글 2
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-3">
-			<div class="ss-photo-item">
-				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
-				</div>
-				<div class="ss-text">
-					<div class="ss-photo-name">사진이름</div>
-					<div class="ss-photo-content">사진설명</div>
-					<div class="ss-photo-buttons">
-						<div class="ss-btn">
-							좋아요 20
-						</div>
-						<div class="ss-btn ss-btn-comments">
-							댓글 2
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-3">
-			<div class="ss-photo-item">
-				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
-				</div>
-				<div class="ss-text">
-					<div class="ss-photo-name">사진이름</div>
-					<div class="ss-photo-content">사진설명</div>
-					<div class="ss-photo-buttons">
-						<div class="ss-btn">
-							좋아요 20
-						</div>
-						<div class="ss-btn ss-btn-comments">
-							댓글 2
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-3">
-			<div class="ss-photo-item">
-				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
-				</div>
-				<div class="ss-text">
-					<div class="ss-photo-name">사진이름</div>
-					<div class="ss-photo-content">사진설명</div>
-					<div class="ss-photo-buttons">
-						<div class="ss-btn">
-							좋아요 20
-						</div>
-						<div class="ss-btn ss-btn-comments">
-							댓글 2
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li class="col-md-3">
-			<div class="ss-photo-item">
-				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
-				</div>
-				<div class="ss-text">
-					<div class="ss-photo-name">사진이름</div>
-					<div class="ss-photo-content">사진설명</div>
-					<div class="ss-photo-buttons">
-						<div class="ss-btn">
-							좋아요 20
-						</div>
-						<div class="ss-btn ss-btn-comments">
-							댓글 2
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
 	</ul>
 </div>
 
+<script id="photo-template" type="text/x-handlebars-template">
+	<li class="col-md-3" photo-id="<%id%>">
+		<div class="ss-photo-item">
+			<div class="ss-photo"
+				style="background-image:url(<%img%>)">
+			</div>
+			<div class="ss-text">
+				<div class="ss-photo-name"><%name%></div>
+				<div class="ss-photo-content"><%content%></div>
+				<div class="ss-photo-buttons">
+					<div class="ss-btn ss-btn-likes">
+						좋아요 <%likes%>
+					</div>
+					<div class="ss-btn ss-btn-comments">
+						댓글 0
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</script>
+
 <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/handlebars@4.0.10/dist/handlebars.min.js"></script>
 <script src="/js/index.js"></script>
 </body>
 </html>

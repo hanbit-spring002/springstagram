@@ -22,4 +22,12 @@ public class PhotoDAO {
 		return sqlSession.insert("photo.insertPhoto", photo);
 	}
 	
+	public int updateLike(String id) {
+		return sqlSession.update("photo.updateLike", id);
+	}
+
+	public PhotoVO selectPhoto(String id) {
+		return sqlSession.selectOne("photo.selectPhoto", id);
+	}
+	
 }

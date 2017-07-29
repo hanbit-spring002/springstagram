@@ -16,5 +16,17 @@
 	  FROM tbl_photos
 	 ORDER BY update_dt DESC
   </select>
+  
+  <select id="selectPhoto" parameterType="string" resultType="photoVO">
+  	SELECT id, name, content, likes, update_dt
+	  FROM tbl_photos
+	 WHERE id = #{id}
+  </select>
+  
+  <update id="updateLike" parameterType="string">
+  	UPDATE tbl_photos
+  	   SET likes = likes + 1
+  	 WHERE id = #{id}
+  </update>
 
 </mapper>

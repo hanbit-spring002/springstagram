@@ -38,4 +38,12 @@ public class PhotoService {
 		return inserted;
 	}
 	
+	public void like(String id) {
+		photoDAO.updateLike(id);
+	}
+	
+	public PhotoVO get(String id) {
+		return photoDAO.selectPhoto(id);
+	}
+	
 }
