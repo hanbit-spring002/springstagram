@@ -32,6 +32,13 @@ $(function() {
 	}
 	
 	function addEvents() {
+		$('.ss-photo').off('click');
+		$('.ss-photo').on('click', function() {
+			var id = $(this).parents('li').attr('photo-id');
+			
+			location.href = '/' + id;
+		});
+		
 		$('.ss-btn-likes').off('click');
 		$('.ss-btn-likes').on('click', function() {
 			var id = $(this).parents('li').attr('photo-id');

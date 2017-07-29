@@ -9,7 +9,7 @@
 <body>
 <div class="ss-container">
 	<div class="ss-title">
-		Springstaram
+		<a href="/">Springstaram</a>
 		<button class="ss-write btn btn-primary">
 			사진등록
 		</button>
@@ -18,11 +18,11 @@
 		<div class="col-md-8 ss-detail-col">
 			<div class="ss-detail-box ss-detail-photo">
 				<div class="ss-photo"
-					style="background-image:url(/img/Penguins.jpg)">
+					style="background-image:url(/file/{{photo.id}})">
 				</div>
 				<div class="ss-photo-buttons">
 					<div class="ss-btn ss-btn-likes">
-						좋아요 0
+						좋아요 <span class="ss-photo-likes">{{photo.likes}}</span>
 					</div>
 					<div class="ss-btn ss-btn-comments">
 						댓글 0
@@ -32,9 +32,9 @@
 		</div>
 		<div class="col-md-4 ss-detail-col">
 			<div class="ss-detail-box ss-detail-text">
-				<div class="ss-photo-name">사진이름</div>
-				<div class="ss-photo-content">사진설명</div>
-				<div class="ss-photo-dt">3시간전</div>
+				<div class="ss-photo-name">{{photo.name}}</div>
+				<div class="ss-photo-content">{{photo.content}}</div>
+				<div class="ss-photo-dt"></div>
 				<ul class="ss-comments">
 					<li>
 						<span class="ss-comment-author">작성자</span>
@@ -58,10 +58,17 @@
 		</div>
 	</div>
 </div>
+<input type="hidden" id="photo-id" value="{{photo.id}}">
+<input type="hidden" id="update-dt" value="{{photo.updateDt}}">
 
 <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/handlebars@4.0.10/dist/handlebars.min.js"></script>
+<script src="https://unpkg.com/moment@2.18.1/min/moment.min.js"></script>
+<script src="https://unpkg.com/moment@2.18.1/locale/ko.js"></script>
 <script src="/js/detail.js"></script>
 </body>
 </html>
+
+
+

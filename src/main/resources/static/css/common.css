@@ -4,6 +4,10 @@ ul {
 	padding: 0;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 .ss-container {
 	position: relative;
 	max-width: 970px;
